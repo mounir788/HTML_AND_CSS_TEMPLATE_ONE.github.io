@@ -159,7 +159,7 @@ header nav .bars span {
   header nav ul {
     display: none;
   }
-  header nav .bars:hover + ul {
+  .show {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -377,8 +377,11 @@ header nav .bars span {
 }
 .portfolio ul li {
   padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.portfolio ul .active {
+.portfolio ul .active,
+.portfolio ul li:hover {
   background-color: var(--mainn-color);
   color: white;
 }
@@ -475,6 +478,7 @@ header nav .bars span {
   color: white;
   border: none;
   padding: 10px 20px;
+  cursor: pointer;
 }
 /* End Video */
 /* Start About */
@@ -658,6 +662,7 @@ header nav .bars span {
   background-color: var(--mainn-color);
   height: 100%;
   position: relative;
+  transition: 0.8s;
 }
 .skills .our-skills .skill-holder .skill span::before {
   content: attr(data-progress);
@@ -972,6 +977,11 @@ footer p:not(.copyright) {
 }
 footer .social-icons i {
   padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+footer .social-icons i:hover {
+  color: var(--transparent-color);
 }
 footer .copyright {
   margin-top: 60px;
